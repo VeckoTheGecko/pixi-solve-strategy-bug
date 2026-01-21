@@ -4,23 +4,24 @@ channels = ["conda-forge"]
 name = "tmp"
 platforms = ["osx-arm64", "win-64", "linux-64"]
 version = "0.1.0"
+preview = ["pixi-build"]
 
-# [package]
-# name = "my_package"
-# version = "0.0.0"
+[package]
+name = "my-package"
+version = "0.1.0"
 
-# [package.build]
-# backend = { name = "pixi-build-python", version = "0.4.*" }
+[package.build]
+backend = { name = "pixi-build-python", version = "0.4.*" }
 
-# [package.host-dependencies]
-# setuptools = "*"
+[package.host-dependencies]
+uv = "*"
 
 
-# [package.run-dependencies]
-# python = ">=3.11"
+[package.run-dependencies]
+python = ">=3.11"
 
 [dependencies]
-python = ">=3.11"
+my-package = {path = "."}
 
 [feature.min]
 solve-strategy = "lowest-direct"
