@@ -1,0 +1,29 @@
+[workspace]
+authors = ["Vecko <36369090+VeckoTheGecko@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "tmp"
+platforms = ["osx-arm64", "win-64", "linux-64"]
+version = "0.1.0"
+
+# [package]
+# name = "my_package"
+# version = "0.0.0"
+
+# [package.build]
+# backend = { name = "pixi-build-python", version = "0.4.*" }
+
+# [package.host-dependencies]
+# setuptools = "*"
+
+
+# [package.run-dependencies]
+# python = ">=3.11"
+
+[dependencies]
+python = ">=3.11"
+
+[feature.min]
+solve-strategy = "lowest-direct"
+
+[environments]
+min ={ features = ['min']}
