@@ -1,0 +1,1 @@
+https://github.com/prefix-dev/pixi/issues/5386
